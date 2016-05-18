@@ -1,0 +1,129 @@
+<html style=
+      "background-image:url(http://i.imgur.com/btxqJBq.jpg);
+       background-repeat:no-repeat;
+       background-attachment:fixed;
+       background-size:100% 100%;">
+
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes" />
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+	<style type="text/css">
+		img{
+		width:5%;
+		height:auto;
+		}
+		.mark1{
+			float:right;
+			margin-right:30%;
+			margin-top:15%;
+		}
+		#mark2{
+			float:right;
+			margin-right:5%;
+			margin-top:15%;
+		}
+		#mark3{
+			float:right;
+			margin-right:10%;
+			margin-top:18%;
+		}
+		#mark4{
+			float:right;
+			margin-right:-35%;
+			margin-top:25%;
+		}
+		#mark5{
+			float:right;
+			margin-right:-15%;
+			margin-top:25%;
+		}
+		#mark6{
+			float:right;
+			margin-right:3%;
+			margin-top:25%;
+		}
+		#mark7{
+			float:right;
+			margin-right:-30%;
+			margin-top:35%;
+		}
+		#mark8{
+			float:right;
+			margin-right:-13%;
+			margin-top:37%;
+		}
+		#mark9{
+			float:right;
+			margin-right:-8%;
+			margin-top:45%;
+		}
+	</style>
+	<script>
+		$(function () {
+		
+			$("#dialog1").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					dialogClass: 'no-close success-dialog',
+					background: "#F9F9F9",
+					color: "#222222"
+			});
+			$("#mark1").click(function () {
+				$("#dialog1").dialog("open");
+			});
+			$("#dialog2").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					dialogClass: 'no-close success-dialog',
+					background: "#F9F9F9",
+					color: "#222222"
+			});
+			$("#mark2").click(function () {
+				$("#dialog2").dialog("open");
+			});
+		
+			
+
+		});
+	
+	</script>
+
+
+</head>
+<body>
+	<div>
+		<img id = "mark1" class="mark1" src="http://i.imgur.com/kYUHHCZ.png">
+		      <div id="dialog1" title="test dialog ">
+		      <p>just for test11111</p>
+		      </div>
+		<img id = "mark2" src="http://i.imgur.com/kYUHHCZ.png">
+		<div id="dialog2" title="test dialog ">
+		      <p>just for test11111</p>
+		      </div>
+		<img id = "mark3" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark4" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark5" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark6" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark7" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark8" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark9" src="http://i.imgur.com/kYUHHCZ.png">
+	</div>
+</body>
+</html>
