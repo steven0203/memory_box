@@ -47,6 +47,28 @@
         color:#000;
         background: #FFF;
     }
+
+    .content{
+       display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+   @font-face {
+        font-family: MyFont;
+        src: url(cwTeXFangSong.woff);
+    }
+    .title
+    {
+        font-family:MyFont;
+        font-size: 100px;
+        color: white;
+    }
+
+ 
+
     </style>
 </head>
 <body>
@@ -56,8 +78,13 @@
             <div class="swiper-slide">
                 <div class="swiper-container swiper-container-v">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url(image/box_cover_1.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(image/box_cover_1_2.jpg)" onclick=sitechange("untitled.html")></div>
+                        <div class="swiper-slide content" style="background-image:url(image/box_cover_1.jpg)">
+                        </div>
+                        <div class="swiper-slide content" style="background-image:url(image/box_cover_1_2r.jpg)" onclick=sitechange("untitled.html")>
+                            <p class="title"> 
+                                西市場位址
+                            </p>
+                        </div>
                     </div>
                     <div class="swiper-pagination swiper-pagination-v"></div>
                 </div>
@@ -65,8 +92,11 @@
             <div class="swiper-slide">
                 <div class="swiper-container swiper-container-v">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url(image/box_cover_2.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(image/box_cover_2_2.jpg)"></div>
+                        <div class="swiper-slide content" style="background-image:url(image/box_cover_2.jpg)">
+                        </div>
+                        <div class="swiper-slide content" style="background-image:url(image/box_cover_2_2r.jpg)">
+                            <p class="title">人物故事 </p>
+                        </div>
                     </div>
                     <div class="swiper-pagination swiper-pagination-v"></div>
                 </div>
@@ -74,8 +104,10 @@
             <div class="swiper-slide">
                 <div class="swiper-container swiper-container-v">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url(image/box_cover_3.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(image/box_cover_3_2.jpg)" onclick=sitechange("page3.html")></div>
+                        <div class="swiper-slide content" style="background-image:url(image/box_cover_3.jpg)"></div>
+                        <div class="swiper-slide content" style="background-image:url(image/box_cover_3_2r.jpg)" onclick=sitechange("page3.html")>
+                             <p class="title">繁華容貌 </p>
+                        </div>
                     </div>
                     <div class="swiper-pagination swiper-pagination-v"></div>
                 </div>
@@ -92,14 +124,14 @@
     <script>
     var swiper = new Swiper('.swiper-container-cube', {
         pagination: '.swiper-pagination-cube',
-        effect: 'cube',
-        cube: {
+        //effect: 'cube',
+     /*  cube: {
             shadow: false,
             slideShadows: false,
             shadowOffset: 20,
             shadowScale: 0.94
         }
-
+*/
     });
   var swiperV = new Swiper('.swiper-container-v', {
         pagination: '.swiper-pagination-v',
