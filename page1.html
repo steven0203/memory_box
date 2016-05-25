@@ -5,15 +5,43 @@
        background-size:100% 100%;">
 
 <head>
+<meta property="fb:app_id" content="284922041847855">
+<meta property="fb:admins" content="100002935394808"/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes" />
 <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet"href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
 	<style type="text/css">
 		img{
 		width:5%;
 		height:auto;
+		}
+		#dialog1 p{
+			font-size:1;
+			
+		}
+		#contain{
+			color: #ffffff;
+			margin-top:-20%;
+		}
+		#ui1{
+			margin-top:7%;
+			margin-left: 1%;
+		}
+		#pic1{
+			width: 100%;
+			height: auto;
+		}
+		#pic3{
+			width: 100%;
+			height: auto;
+		}
+		#pic5{
+			width: 100%;
+			height: auto;
 		}
 		.mark1{
 			float:right;
@@ -60,8 +88,46 @@
 			margin-right:-8%;
 			margin-top:45%;
 		}
+		.ui-widget-header,.ui-state-default, ui-button{
+			background:rgba(255,255,255,0);
+			border: 0px solid rgba(255,255,255,0.9);
+			color: rgba(255,255,255,0.9);
+			font-weight: bold;
+			display: hidden;
+		}
+		.ui-state-default, ui-button{
+			background:rgba(255,255,255,0.9);
+			border: 0px solid rgba(255,255,255,0.9);
+			color: rgba(255,255,255,0.9);
+			font-weight: bold;
+		}
+		.ui-widget-content{
+			background: rgba(255,255,255,0.9);
+		}
+		.ui-dialog .ui-dialog-titlebar-close {
+		    right: .3em;
+		    top: 50%;
+            width: 21px;
+            margin: -10px 0 0 0;
+	        padding: 1px;
+	        height: 20px;
+	        background-image: url(http://i.imgur.com/uoD4xAx.png); 
+
+	    }
 	</style>
 	<script>
+	$(window).on("orientationchange",function(){
+		if(window.orientation == 0) // Portrait
+		{
+			alert("請使用橫向顯示！ ");
+		}
+		else // Landscape
+		{
+		//	$("p").css({"background-color":"pink","font-size":"200%"});
+			
+		}
+		
+	});
 		$(function () {
 		
 			$("#dialog1").dialog({
@@ -74,14 +140,16 @@
 						effect: "blind",
 						duration: 1000
 						},
+					modal: true,
 					dialogClass: 'no-close success-dialog',
-					background: "#F9F9F9",
-					color: "#222222"
+					height:"auto",
+					width:"100%",
+					closeText: 'X'
 			});
 			$("#mark1").click(function () {
 				$("#dialog1").dialog("open");
 			});
-			$("#dialog2").dialog({
+			$("#dialog3").dialog({
 				autoOpen: false,
 				show: {
 					effect: "blind",
@@ -91,16 +159,34 @@
 						effect: "blind",
 						duration: 1000
 						},
+					height:"auto",
+					width:"100%",
 					dialogClass: 'no-close success-dialog',
-					background: "#F9F9F9",
-					color: "#222222"
+					closeText: 'X'
 			});
-			$("#mark2").click(function () {
-				$("#dialog2").dialog("open");
+			$("#mark3").click(function () {
+				$("#dialog3").dialog("open");
+			});
+			$("#dialog5").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					height:"auto",
+					width:"100%",
+					dialogClass: 'no-close success-dialog',
+					closeText: 'X'
+			});
+			$("#mark5").click(function () {
+				$("#dialog5").dialog("open");
 			});
 		
 			
-
 		});
 	
 	</script>
@@ -108,18 +194,37 @@
 
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6&appId=284922041847855";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 	<div>
+	
 		<img id = "mark1" class="mark1" src="http://i.imgur.com/kYUHHCZ.png">
-		      <div id="dialog1" title="test dialog ">
-		      <p>just for test11111</p>
+		      <div id="dialog1" title=" ">
+		      <h3>原西市場正門方向</h3>
+		      <img id = "pic1" src="http://i.imgur.com/wlDnCpm.jpg">
+		      <div class="fb-comments" data-href="http://steven0203.github.io/memory_box/untitled.html" data-width="500" data-numposts="5"></div>
 		      </div>
 		<img id = "mark2" src="http://i.imgur.com/kYUHHCZ.png">
-		<div id="dialog2" title="test dialog ">
-		      <p>just for test11111</p>
-		      </div>
 		<img id = "mark3" src="http://i.imgur.com/kYUHHCZ.png">
+			<div id="dialog3" title=" ">
+				<h3>原台南州青果同業組合香蕉倉庫</h3>
+		      <img id = "pic3" src="http://i.imgur.com/qNA3Lh0.jpg">
+		      <div class="fb-comments" data-href="http://steven0203.github.io/memory_box/untitled.html" data-width="500" data-numposts="5"></div>
+		      </div>
 		<img id = "mark4" src="http://i.imgur.com/kYUHHCZ.png">
 		<img id = "mark5" src="http://i.imgur.com/kYUHHCZ.png">
+			<div id="dialog5" title=" ">
+				<h3>西市場內部設置</h3>
+		      <img id = "pic5" src="http://i.imgur.com/AHc24CZ.jpg">
+		      <div class="fb-comments" data-href="http://steven0203.github.io/memory_box/untitled.html" data-width="500" data-numposts="5"></div>
+		      </div>		
 		<img id = "mark6" src="http://i.imgur.com/kYUHHCZ.png">
 		<img id = "mark7" src="http://i.imgur.com/kYUHHCZ.png">
 		<img id = "mark8" src="http://i.imgur.com/kYUHHCZ.png">

@@ -1,0 +1,276 @@
+<html style=
+      "background-image:url(http://i.imgur.com/2TWlbjW.png);
+       background-repeat:no-repeat;
+       background-attachment:fixed;
+       background-size:100% 100%;">
+
+<head>
+<meta property="fb:app_id" content="1183481105016019">
+<meta property="fb:admins" content="100002935394808"/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes" />
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet"href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+
+	<style type="text/css">
+		#dialog1 p{
+			font-size:1;
+			
+		}
+		#contain{
+			color: #ffffff;
+			margin-top:-20%;
+		}
+		#ui1{
+			margin-top:7%;
+			margin-left: 1%;
+		}
+
+		#pic8{
+			width: 80%;
+			height: auto;
+			margin-left: 5%;
+		}
+		#pic7{
+			width: 80%;
+			height: auto;
+			margin-left: 5%;
+		}
+		#pic6{
+			width: 80%;
+			height: auto;
+			margin-left: 5%;
+		}
+		#shop1{
+			width: 17%;
+			height: auto;
+			float: right;
+			margin-top: 12%;
+			margin-right: 17%
+
+		}
+		#shop2{
+			width: 9%;
+			height: auto;
+			float: right;
+			margin-right: 8%;
+		    margin-top: 12%;
+		}
+		#shop3{
+			width: 17%;
+			height: auto;
+			float: left;
+			margin-top: 12%;
+			margin-left: 24%;
+		}
+		#shop4{
+			width: 10%;
+			height: auto;
+			float: right;
+			margin-top: 25%;
+			margin-right: -12%;
+		}
+		#shop5{
+			width: 17%;
+			height: auto;
+			float: left;
+			margin-top: 5%;
+			margin-left: 24%;
+		}
+		#shop6{
+			width: 17%;
+			height: auto;
+			float: left;
+			margin-top: 1%;
+			margin-left: 24%;
+		}
+		#shop7{
+			width: 10%;
+			height: auto;
+			float: right;
+			margin-top: 1%;
+			margin-right: 43%;
+		}
+		#shop8{
+			width: 10%;
+			height: auto;
+			float: right;
+			margin-top: 1%;
+			margin-right: -23%;
+		}
+		.ui-widget-header,.ui-state-default, ui-button{
+			background:rgba(255,255,255,0);
+			border: 0px solid rgba(255,255,255,0.9);
+			color: rgba(255,255,255,0.9);
+			font-weight: bold;
+			display: hidden;
+		}
+		.ui-state-default, ui-button{
+			background:rgba(255,255,255,0.9);
+			border: 0px solid rgba(255,255,255,0.9);
+			color: rgba(255,255,255,0.9);
+			font-weight: bold;
+		}
+		.ui-widget-content{
+			background: rgba(255,255,255,0.9);
+		}
+		.ui-dialog .ui-dialog-titlebar-close {
+		    right: .3em;
+		    top: 50%;
+            width: 21px;
+            margin: -10px 0 0 0;
+	        padding: 1px;
+	        height: 20px;
+	        background-image: url(http://i.imgur.com/uoD4xAx.png); 
+
+	    }
+
+	</style>
+	<script>
+	$(window).on("orientationchange",function(){
+		if(window.orientation == 0) // Portrait
+		{
+			alert("請使用橫向顯示！ ");
+		}
+		else // Landscape
+		{
+		//	$("p").css({"background-color":"pink","font-size":"200%"});
+			
+		}
+		
+	});
+		$(function () {
+			$("#dialog7").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					modal: true,
+					dialogClass: 'no-close success-dialog',
+					height:"auto",
+					width:"100%"
+			});
+			$("#shop7").click(function () {
+				$("#dialog7").dialog("open");
+			});
+		
+			$("#dialog8").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					modal: true,
+					dialogClass: 'no-close success-dialog',
+					height:"auto",
+					width:"100%"
+			});
+			$("#shop8").click(function () {
+				$("#dialog8").dialog("open");
+			});
+			$("#dialog6").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					height:"auto",
+					width:"100%",
+					dialogClass: 'no-close success-dialog'
+
+			});
+			$("#shop6").click(function () {
+				$("#dialog6").dialog("open");
+			});
+		
+			
+
+		});
+		$(document).on("pageinit","#pageone",function(){
+			$("p").on("swipe",function(){
+				$("span").text("Swipe detected!");
+			});                       
+});
+	</script>
+
+
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1183481105016019";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div data-role="page" id="pageone">
+  <div data-role="header" style="display:none">
+  </div>
+
+  <div data-role="content">
+    	<div>
+		<img id="shop1" src="http://i.imgur.com/bC7hUER.png ">
+		<img id="shop2" src="http://i.imgur.com/pwBbzZa.png ">
+		<img id="shop3" src="http://i.imgur.com/yKGux46.png">
+		<img id="shop4" src="http://i.imgur.com/s9n5os5.png ">
+		<img id="shop5" src="http://i.imgur.com/EGWhtzx.png ">
+		<img id="shop6" src="http://i.imgur.com/4ZJn4Fk.png ">
+		<div id="dialog6" >
+		    <img id = "pic6" src="http://i.imgur.com/OzhCdsA.jpg">
+		      <br>
+		      &nbsp;&nbsp; &nbsp;&nbsp;在誠鋪茶飲的鄰旁，是充滿著繽紛色彩的雜貨店。與年青的店東聊天，原來店中的日本貨都是由她親自從日本帶回來，當初她願意接手阿嬤店也是因愛去日本也愛用日本產品。皇后本鋪前身是阿嬤的鶯雅百貨，從1956開始是賣日美歐的貨物。<br>
+		      &nbsp;&nbsp; &nbsp;&nbsp;在國際交通不便的過去，阿嬤也兼了跑單幫，所以現在的店東從小就跟隨阿嬤用日本貸，自阿嬤年老不能再經營百貨，店東在2001年接手店面，改名皇后本鋪，主要賣化妝品和零食。<br>&nbsp;&nbsp; &nbsp;&nbsp;作為第三代的西市場店家，承接了上一代的店面也延續西市場的活力，令西市場不只是活在過去，也找到屬於當代的活力。
+		      <div class="fb-comments" data-href="http://steven0203.github.io/memory_box/untitled3.html" data-width="500" data-numposts="5"></div>
+		</div>
+		<img id="shop7" src="http://i.imgur.com/GpdFITR.png ">
+		<div id="dialog7" title="">
+		      <img id = "pic7" src="http://i.imgur.com/Odt6cCb.jpg">
+		      <div id="font1">
+		      <p></p>
+		      &nbsp;&nbsp;&nbsp;&nbsp;金連五發金行是一家刀具店，店中從家用小刀至餐應的專業菜刀都有出售，而刀有外國進口也有台灣製造。
+		      <br>&nbsp;&nbsp;&nbsp;&nbsp;簡樸的店，沒有多餘的裝飾，彷佛是一種尊注執著的情懷。
+		      <br>&nbsp;&nbsp;&nbsp;&nbsp;店家是一位70多歲的婆婆，面對生客話不多，婆婆說她是從50多年前接手打理丈夫父親的刀具店，從那時候開始生活就沒有離開過西市場。
+		      <br>&nbsp;&nbsp;&nbsp;&nbsp;大半生都活在西市場，不離開 – 是一種選擇，選擇了平靜。<br>
+		      <div class="fb-comments" data-href="http://steven0203.github.io/memory_box/untitled3.html" data-width="500" data-numposts="5"></div>
+		  </div>
+		<img id="shop8" src="http://i.imgur.com/YW2wvk9.png ">
+		<div id="dialog8" >
+		      <img id = "pic8" src="http://i.imgur.com/9E9wMgP.jpg">
+		      <br>
+		      &nbsp;&nbsp; &nbsp;&nbsp;萬香布行在安正斜對面，是一間從日治時代已在在的店家，前身是一家由日本人經營的餅乾零食店，二戰後日本人撤離台灣，萬香由台南人接手成了布行。<br>
+		      &nbsp;&nbsp; &nbsp;&nbsp;現任老闆是接手岳父的有料生意，而萬香的布都是老闆自己從日本帶回來的，日本布比一般台灣或大陸的布料好，不易變形退色，但款式偏保守，不比歐洲有花樣多，款式層出不窮，老闆說賣日本布是為了跟其他布行做出差別，雖然價格比較貴，但懂布的客戶會知詭有其價值。
+		      <br>
+		      &nbsp;&nbsp; &nbsp;&nbsp;老闆說從前成衣仍沒普遍，市場附近的酒家小姐會特別來訂造旗袍，對她們來說旗袍就是工作制服，每天要有不同的漂亮衣服帶給客人新鮮感。說著布，老闆也在說日本布在台南的一件件小故事。
+		      <div class="fb-comments" data-href="http://steven0203.github.io/memory_box/untitled3.html" data-width="500" data-numposts="5"></div>
+		</div>
+	</div>
+
+
+
+
+  </div>
+
+  <div data-role="footer" style="display:none">
+  </div>
+</div> 
+
+</body>
+</html>
