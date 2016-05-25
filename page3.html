@@ -2,11 +2,18 @@
 <html lang="en-US">
 <head>
 
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <link rel="stylesheet" href="http://fonts.useso.com/css?family=Cutive">
+      <link rel="stylesheet" href="build/styles.css">  
 
+  
 
-  <meta charset="utf-8">
+ 
   <meta http-equiv="Content-Type" content="text/html">
-  <title>Vertical Responsive Timeline UI - Template Monster Demo</title>
+  <title>MemoryBox-Timeline </title>
   <meta name="author" content="Jake Rocheleau">
   <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
   <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
@@ -15,10 +22,9 @@
   <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
   <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 
-  <!--點圖放大開始-->
-<SCRIPT LANGUAGE="JavaScript">
+    <!--點圖放大開始-->
+    <SCRIPT LANGUAGE="JavaScript">
 
-    <!--- Hide script from old browsers
     function OpenNewWindow(JavamPicture,WindowParameters)
     {
     NewWindow=window.open("","NewOne", WindowParameters);
@@ -44,82 +50,142 @@
 
 </head>
 
-<body>
+    <body >
 
+       <div class="outer">
+            <div class="inner">
+                <div class="wrapper">
+                    <div class="scene">
+                        <div>- <span id="vader"></span></div>
+                        <div>- <span id="luke"></span></div>
+                    </div>
+
+                    <pre id="nodebug"><code>
+                    
+                       theater.write(<span id="log"></span>);
+
+                    </code></pre>
+                    <p>
+                        <a id="hidelink" href="#nodebug">hide code</a>
+                       
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <script src="build/theater.js"></script>
+        <script>
+            (function () {
+                "use strict";
+
+                var $log    = document.querySelector("#log");
+                var theater = new TheaterJS();
+
+                theater
+                    .describe("Vader", .8, "#vader")
+                    .describe("Luke", .6, "#luke");
+
+                theater
+                    .on("*", function (eventName, originalEvent, sceneName, arg) {
+                        var args  = Array.prototype.splice.apply(arguments, [3]),
+                            log   = '{\n      name: "' + sceneName + '"';
+
+                        if (args.length > 0) log += ",\n      args: " + JSON.stringify(args).split(",").join(", ");
+                        log += "\n    }";
+
+                        $log.innerHTML = log;
+                    })
+                    .on("say:start, erase:start", function (eventName) {
+                        var self    = this,
+                            current = self.current.voice;
+
+                        self.utils.addClass(current, "saying");
+                    })
+                    .on("say:end, erase:end", function (eventName) {
+                        var self    = this,
+                            current = self.current.voice;
+
+                        self.utils.removeClass(current, "saying");
+                    });
+
+                theater
+                    .write("Vader:Hey!", 400, toggleClass)
+                    .write("Luke:Welcome to the Memory Box!", toggleClass)
+                    .write({ name: "call", args: [kill, true] })
+                    
+        
+
+                var body = document.getElementsByTagName("BODY")[0];
+
+                function toggleClass (className) {
+                    if (typeof className !== "string") className = "light";
+
+                    if (theater.utils.hasClass(body, className)) theater.utils.removeClass(body, className);
+                    else theater.utils.addClass(body, className);
+                }
+
+                function kill () {
+                    var self    = this,
+                        delay   = 100,
+                        i       = 0,
+                        timeout = setTimeout(function blink () {
+                            toggleClass("blood");
+                            if (++i < 6) timeout = setTimeout(blink, delay);
+                            else self.next();
+                        }, delay);
+
+                    return self;
+                }
+            })();
+        </script>
+
+ <div class="header"></div>
+
+</div>
+
+<div>
+  
+  <embed src="http://luffy.ee.ncku.edu.tw/~YenKang/MemoryBox-Page3/taiwansong-1931.mp3" autostart="true" loop="1" volume="100" width="230" height=100 ></embed>
+</div>
 
 
 <div class="container">
   <header class="page-header">
-    <h1>Tainan Westen Market</h1>
+    <h1>Tainan Western Market</h1>
   </header>
   
   <ul class="timeline">
 
-    <li><div class="tldate"> 2015 </div></li>
     
-    <li>
+
+    <li><div class="tldate"> <a href="1930.mp4" width="700" height="500" >1930 </a> </div></li>
+      <li>
       
-      <div class="timeline-panel">
-        <div class="tl-heading">
-          <h4>Cute photo</h4>
-        </div>
-        <div class="tl-body">
-          <p></p>
-
-          <A href=# onClick="OpenNewWindow('image/cute.jpg','menubar=0,scrollbars=0,toolbar=0,width=220, height=190');return false;">
-          <img src="image/cute.jpg"  height="560" width="700" border="0"></A>
-
-        </div>
-      </div>
-    </li>
-    
-
-    <li><div class="tldate"> 1900 </div></li>
-    <li>
-     
-      <div class="timeline-panel">
-        <div class="tl-heading">
-          <h4>Fish vendor </h4>
-          
-        </div>
-        <div class="tl-body">
-    
-          <A href=# onClick="OpenNewWindow('image/fish.jpg','menubar=0,scrollbars=0,toolbar=0,width=220, height=190');return false;">
-              <img src="image/fish.jpg"  height="490" width="700" border="0"></A>
-
-        </div>
-      </div>
-    </li>
-
-    ---------------------------------------------------------
-
-    <li><div class="tldate"> 1920 </div></li>
-    <li>
-      
-      <div class="timeline-panel">
-        <div class="tl-heading">
-          <h4>Vegetable vendor</h4>
-        </div>
-        <div class="tl-body">
-          <p></p>
-
-          <A href=# onClick="OpenNewWindow('image/fish.jpg','menubar=0,scrollbars=0,toolbar=0,width=220, height=190');return false;">
-              <img src="image/fish.jpg"  height="490" width="700" border="0"></A>
-
-        </div>
-      </div>
-    </li>
-
-
-    ---------------------------------------------------------
-
-
-    <li><div class="tldate"> 1930 </div></li>
-    <li>
-     
       <div class="timeline-panel">
         <div class="tl-heading">
           <h4>Fish vendor</h4>
+        </div>
+        <div class="tl-body">
+          <p></p>
+
+          <A href=# onClick="OpenNewWindow('image/1911-click.jpg','menubar=0,scrollbars=0,toolbar=0,width=220, height=190');return false;">
+              <img src="image/fish.jpg"  height="490" width="700" border="0"></A>
+
+        </div>
+      </div>
+    </li>
+    
+
+
+
+
+    <li><div class="tldate"> <a href="taiwansong-1931.mp3">1933 </a></div></li>
+    <li>
+     
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>Vegetable vendor</h4>
         </div>
         <div class="tl-body">
           <p></p>
@@ -130,62 +196,58 @@
         </div>
       </div>
     </li>     
-     ----------------------------------------------------
-
-
-
-    <li><div class="tldate"> 1971 </div></li>
-    <li>
-     
-      <div class="timeline-panel">
-        <div class="tl-heading">
-          <h4>1971</h4>
-        </div>
-        <div class="tl-body">
-          <p></p>
-
-      
-           <A href=# onClick="OpenNewWindow('image/1971.jpg','menubar=0,scrollbars=0,toolbar=0,width=2200, height=190');return false;">
-          <img src="image/1971.jpg"  height="523 px" width="700" border="0"></A>
-
-        </div>
-      </div>
-    </li>   
-
-
-
-
-
-
-
-
-
-
-    ---------------------------------------------------------
-
-
-
-
-
-    <li><div class="tldate"> 1971 </div></li>
-    <li>
-     
-      <div class="timeline-panel">
-        <div class="tl-heading">
-          <h4>1971</h4>
-        </div>
-        <div class="tl-body">
-          <p></p>
-
-      
-           <A href=# onClick="OpenNewWindow('image/1971.jpg','menubar=0,scrollbars=0,toolbar=0,width=2200, height=190');return false;">
-          <img src="image/1971.jpg"  height="523 px" width="700" border="0"></A>
-
-        </div>
-      </div>
-    </li>   
-
    
+
+
+
+    <li><div class="tldate"> 1971 </div></li>
+    <li>
+     
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>1971</h4>
+        </div>
+        <div class="tl-body">
+          <p></p>
+
+      
+           <A href=# onClick="OpenNewWindow('image/1971.jpg','menubar=0,scrollbars=0,toolbar=0,width=220, height=190');return false;">
+          <img src="image/1971.jpg"  height="523 px" width="700" border="0"></A>
+
+        </div>
+      </div>
+    </li>   
+
+
+    <li> <div class="tldate"><a href="k.mp3">2015 </a> </div> 
+  
+    </li>
+    
+    <li>
+      
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>Cute photo</h4>
+
+
+      
+        </div>
+        <div class="tl-body">
+         
+
+        
+          <A href=# onClick="OpenNewWindow('image/cute.jpg','menubar=0,scrollbars=0,toolbar=0,width=220, height=190');return false;">
+              <img src="image/cute.jpg"  height="500" width="700" border="0"></A> 
+
+        </div>
+       
+      </div>
+
+      
+    </li>
+
+
+
 
 
     <li>
@@ -202,7 +264,7 @@
         </div>
 
         <div class="tl-body">
-          <p>Write up a quick summary of the event.</p>
+          
         </div>
       </div>
     </li>
