@@ -1,11 +1,11 @@
 <html style=
-      "background-image:url(image/page1.jpg);
+      "background-image:url(http://i.imgur.com/IaC0Geu.jpg);
        background-repeat:no-repeat;
        background-attachment:fixed;
        background-size:100% 100%;">
 
 <head>
-<meta property="fb:app_id" content="284922041847855">
+<meta property="fb:app_id" content="532403953633670">
 <meta property="fb:admins" content="100002935394808"/>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes" />
@@ -13,31 +13,52 @@
 <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <link rel="stylesheet"href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 <link rel="stylesheet"href="main.css"/>
-	<style type="text/css">
 
+    <style type="text/css">
+    </style>
 
-	</style>
-	<script language="javascript">
+	<script>
+	//回首頁
 	function backhome(){
 		document.location.href="http://steven0203.github.io/memory_box/";
 
 	}
+	//上一頁
 	function goback(){
 		window.history.back();
 	}
+	//開子頁
+	function show(){
 
+    if(document.getElementById("title5").src=="http://i.imgur.com/w0vMN28.png"){
+      document.getElementById("title5").src = "http://i.imgur.com/M0Rl8vE.png";
+      document.getElementById("title5").style = "margin-top: -20%;";
+      document.getElementById("ifm").style = "display:true";
+      document.getElementById("ifm").style = "margin-top: -16%;"
+    }
+    else{
+      document.getElementById("title5").src="http://i.imgur.com/w0vMN28.png";
+      document.getElementById("title5").style = "margin-top: -5%;";
+      document.getElementById("ifm").style = "display:none";
+    }
+}
 	</script>
 
 
 </head>
 <body>
-<div id="fb-root"></div>
-<div>
+
+  <div>
+
 <a href="#"><img id="home" onclick="backhome()" src="http://i.imgur.com/1iXzHxm.png"></a>
 <a href="#"><img id="back" onclick="goback()" src="http://i.imgur.com/ar7L2g3.png"></a>
 <a href="#"><img id="close" onclick="goback()" src="http://i.imgur.com/3ZvbWCy.png"></a>
-</div>
 
-	</div>
+</div>
+<div id="mainpic">
+  <img id="main"  src="http://i.imgur.com/sI6OWwL.png">
+  <img id="title5" onclick="show()" src="http://i.imgur.com/w0vMN28.png"> 
+</div>
+<iframe id="ifm" src="iframe25.html" style="display:none"></iframe>
 </body>
 </html>
