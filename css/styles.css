@@ -5,6 +5,14 @@
 
 }
 
+  body {　
+
+　overflow-y: hidden;
+
+　overflow-x: scroll;
+
+}
+}
 
 
 
@@ -17,12 +25,15 @@
 
 .tl-heading{
   font-size: 80px;
-  color: #efefef;
+  color: #555;
 }
 
 
 .tl-heading h4{
   font-size: 60px;
+  text-align:center;
+  color: #555;
+  font-family:sans-serif;
   
 }
 
@@ -32,13 +43,15 @@
 
 body { background: #333; }
 
-img { border: 0; max-width: 100%; }
+img { border: 0; max-width: 100%;margin-left: 27%; }
 
 .page-header h1 {
   font-size: 120px;
   text-align: center;
-  color: #A94442;
+  color: #555;
   text-shadow: 1px 1px 0 #000;
+  font-family: DFKai-sb;
+
 }
 
 /** timeline box structure **/
@@ -97,7 +110,7 @@ img { border: 0; max-width: 100%; }
   width: 60%;
   border-radius: 50%;
   /*float: left;*/
-  
+  opacity:0.6;
 
 
   background: #fff;
@@ -187,7 +200,7 @@ img { border: 0; max-width: 100%; }
 
 .tl-heading h4 {
   margin: 0;
-  color: #c25b4e;
+  color: #555;
 }
 
 .tl-body p, .tl-body ul {
